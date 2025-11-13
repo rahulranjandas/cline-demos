@@ -23,4 +23,15 @@ public class CalculatorTest {
         Assert.assertEquals(6, calc.multiply(2, 3));
     }
 
+    @Test
+    public void testDivideByZero() {
+        Calculator calc = new Calculator();
+        try {
+            calc.divide(5, 0);
+            Assert.fail("Expected IllegalArgumentException");
+        } catch (IllegalArgumentException e) {
+            Assert.assertEquals("Division by zero is not allowed", e.getMessage());
+        }
+    }
+
 }
