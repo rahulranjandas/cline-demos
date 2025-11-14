@@ -1,0 +1,8 @@
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd" >
+<suite name="UserLoginSuite" parallel="methods" thread-count="2">
+  <test name="UserLoginTests">
+    <classes>
+      <class name="com.example.UserLoginTest"/>
+    </classes>
+  </test>
+</suite>

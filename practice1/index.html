@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cline's Website</title>
+    <style>
+        body {
+            height: 100vh;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            transition: background 1s ease;
+        }
+        .gradient {
+            background: linear-gradient(45deg, #ff9a9e, #fad0c4, #fbc2eb);
+            background-size: 400% 400%;
+            animation: gradient 15s ease infinite;
+        }
+        @keyframes gradient {
+            0% {
+                background-position: 0% 50%;
+            }
+            50% {
+                background-position: 100% 50%;
+            }
+            100% {
+                background-position: 0% 50%;
+            }
+        }
+        #theme-button {
+            margin-top: 20px;
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+            border: none;
+            border-radius: 5px;
+            background-color: #007bff;
+            color: white;
+            transition: background-color 0.3s ease;
+        }
+        #theme-button:hover {
+            background-color: #0056b3;
+        }
+        #click-count {
+            margin-top: 10px;
+            font-size: 16px;
+        }
+    </style>
+</head>
+<body class="gradient">
+    <h1 id="welcome-message">Hello from Cline!</h1>
+    <button id="theme-button">Change Theme</button>
+    <p id="click-count">Button clicked: 0 times</p>
+    <p id="prompt">Press Enter Key</p>
+    <script>
+        let themes = [
+            { background: 'linear-gradient(45deg, #ff9a9e, #fad0c4, #fbc2eb)' },
+            { background: 'linear-gradient(45deg, #a1c4fd, #c2e9fb, #a1c4fd)' },
+            { background: 'linear-gradient(45deg, #f6d365, #fda085, #f6d365)' },
+            { background: 'linear-gradient(45deg, #84fab0, #8fd3f4, #84fab0)' },
+        ];
+        let currentTheme = 0;
+        let clickCount = 0;
+
+        document.getElementById('theme-button').addEventListener('click', function() {
+            currentTheme = (currentTheme + 1) % themes.length;
+            document.body.style.background = themes[currentTheme].background;
+            clickCount++;
+            document.getElementById('click-count').innerText = `Button clicked: ${clickCount} times`;
+        });
+    </script>
+</body>
+</html>

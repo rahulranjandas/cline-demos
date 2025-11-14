@@ -1,0 +1,6 @@
+- [ ] Analyze requirements and available MCP servers
+- [ ] Verify availability and setup of 'selenium' MCP server
+- [ ] Prepare/implement script to launch Chrome browser
+- [ ] Automate navigation to 'https://www.saucedemo.com'
+- [ ] Automate login using provided credentials
+- [ ] Test and verify automation works as intended

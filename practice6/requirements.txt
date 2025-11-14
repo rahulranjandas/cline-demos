@@ -1,0 +1,7 @@
+REQUIREMENTS FOR USER MANAGEMENT SYSTEM:
+1. User class must have: id, username, email, status fields
+2. UserService must provide: createUser, findUserById, updateUserStatus methods
+3. All methods need proper validation
+4. Use Java 17 features where appropriate
+5. Include comprehensive error handling
+6. Follow clean code principles
